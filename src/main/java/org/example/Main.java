@@ -97,6 +97,37 @@ public class Main {
             listaPrecioArticulo.setUsuarioModificacion(usuario);
             em.persist(listaPrecioArticulo);
 
+            Contacto contacto = new Contacto("luiluis@mail.com", "232245623", "43573532");listaPrecioArticulo.setFechaAlta(new java.util.Date());
+            em.persist(contacto);
+
+            Domicilio domicilio = new Domicilio("San Luis", "213");
+            em.persist(domicilio);
+
+            Cliente cliente = new Cliente(
+                    "28431940236",
+                    "cliente",
+                    contacto,
+                    domicilio);
+            cliente.setFechaAlta(new java.util.Date());
+            cliente.setFechaModificacion(new java.util.Date());
+            cliente.setUsuarioCarga(usuario);
+            cliente.setUsuarioModificacion(usuario);
+            em.persist(cliente);
+
+            CondicionIva condicionIva = new CondicionIva(351, "Monotributista");
+            condicionIva.setFechaAlta(new java.util.Date());
+            condicionIva.setFechaModificacion(new java.util.Date());
+            condicionIva.setUsuarioCarga(usuario);
+            condicionIva.setUsuarioModificacion(usuario);
+            em.persist(condicionIva);
+
+            TipoMoneda tipoMoneda = new TipoMoneda("351", "Monotributista", "ARS");
+            tipoMoneda.setFechaAlta(new java.util.Date());
+            tipoMoneda.setFechaModificacion(new java.util.Date());
+            tipoMoneda.setUsuarioCarga(usuario);
+            tipoMoneda.setUsuarioModificacion(usuario);
+            em.persist(tipoMoneda);
+
             FacturaVenta facturaVenta = new FacturaVenta(
                     4L,
                     new Date(),
@@ -111,7 +142,10 @@ public class Main {
                     "EMITIDA",
                     null,
                     "Factura de prueba",
-                    new ArrayList<>()
+                    new ArrayList<>(),
+                    cliente,
+                    condicionIva,
+                    tipoMoneda
             );
             facturaVenta.setFechaAlta(new Date());
             facturaVenta.setFechaModificacion(new Date());

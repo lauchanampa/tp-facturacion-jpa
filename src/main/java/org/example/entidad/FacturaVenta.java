@@ -46,10 +46,27 @@ public class FacturaVenta extends AuditoriaApp {
     @OneToMany(mappedBy = "factura", cascade = CascadeType.ALL)
     private List<FacturaVentaDetalle> detalles;
 
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private Cliente cliente;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private CondicionIva condicionIva;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private TipoMoneda tipoMoneda;
+
+
     public FacturaVenta() {
     }
 
-    public FacturaVenta(Long numero, Date fechaEmision, PuntoVenta puntoVenta, double importeCobrado, double importeSaldo, double importeTotal, String cae, Date caeFechaVencimiento, String resultadoAfip, String motivoRechazo, String estado, Date fechaAnulacion, String observaciones, List<FacturaVentaDetalle> detalles) {
+    public FacturaVenta(Long numero, Date fechaEmision, PuntoVenta puntoVenta, double importeCobrado,
+                        double importeSaldo, double importeTotal, String cae, Date caeFechaVencimiento,
+                        String resultadoAfip, String motivoRechazo, String estado, Date fechaAnulacion,
+                        String observaciones, List<FacturaVentaDetalle> detalles, Cliente cliente,
+                        CondicionIva condicionIva, TipoMoneda tipoMoneda) {
         this.numero = numero;
         this.fechaEmision = fechaEmision;
         this.puntoVenta = puntoVenta;
@@ -64,6 +81,9 @@ public class FacturaVenta extends AuditoriaApp {
         this.fechaAnulacion = fechaAnulacion;
         this.observaciones = observaciones;
         this.detalles = detalles;
+        this.cliente = cliente;
+        this.condicionIva = condicionIva;
+        this.tipoMoneda = tipoMoneda;
     }
 
     public Long getNumero() {
@@ -176,5 +196,29 @@ public class FacturaVenta extends AuditoriaApp {
 
     public void addDetalle(FacturaVentaDetalle detalle) {
         detalles.add(detalle);
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public CondicionIva getCondicionIva() {
+        return condicionIva;
+    }
+
+    public void setCondicionIva(CondicionIva condicionIva) {
+        this.condicionIva = condicionIva;
+    }
+
+    public TipoMoneda getTipoMoneda() {
+        return tipoMoneda;
+    }
+
+    public void setTipoMoneda(TipoMoneda tipoMoneda) {
+        this.tipoMoneda = tipoMoneda;
     }
 }

@@ -11,22 +11,22 @@
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>org.example.EntityId</class>
-        <class>org.example.AuditoriaApp</class>
-        <class>org.example.Usuario</class>
-        <class>org.example.Cliente</class>
-        <class>org.example.Contacto</class>
-        <class>org.example.Domicilio</class>
-        <class>org.example.CondicionIva</class>
-        <class>org.example.TipoMoneda</class>
-        <class>org.example.PuntoVenta</class>
-        <class>org.example.Rubro</class>
-        <class>org.example.Marca</class>
-        <class>org.example.Articulo</class>
-        <class>org.example.ListaPrecio</class>
-        <class>org.example.ListaPrecioArticulo</class>
-        <class>org.example.FacturaVenta</class>
-        <class>org.example.FacturaVentaDetalle</class>
+        <class>org.example.entidad.EntityId</class>
+        <class>org.example.entidad.AuditoriaApp</class>
+        <class>org.example.entidad.Usuario</class>
+        <class>org.example.entidad.Cliente</class>
+        <class>org.example.entidad.Contacto</class>
+        <class>org.example.entidad.Domicilio</class>
+        <class>org.example.entidad.CondicionIva</class>
+        <class>org.example.entidad.TipoMoneda</class>
+        <class>org.example.entidad.PuntoVenta</class>
+        <class>org.example.entidad.Rubro</class>
+        <class>org.example.entidad.Marca</class>
+        <class>org.example.entidad.Articulo</class>
+        <class>org.example.entidad.ListaPrecio</class>
+        <class>org.example.entidad.ListaPrecioArticulo</class>
+        <class>org.example.entidad.FacturaVenta</class>
+        <class>org.example.entidad.FacturaVentaDetalle</class>
 
         <properties>
 
@@ -40,7 +40,7 @@
                       value="postgres"/>
 
             <property name="jakarta.persistence.jdbc.password"
-                      value="EEJEMPLOO"/>
+                      value="EJEMPLOO"/>
 
             <property name="hibernate.show_sql"
                       value="true"/>
