@@ -11,6 +11,23 @@
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
+        <class>org.example.EntityId</class>
+        <class>org.example.AuditoriaApp</class>
+        <class>org.example.Usuario</class>
+        <class>org.example.Cliente</class>
+        <class>org.example.Contacto</class>
+        <class>org.example.Domicilio</class>
+        <class>org.example.CondicionIva</class>
+        <class>org.example.TipoMoneda</class>
+        <class>org.example.PuntoVenta</class>
+        <class>org.example.Rubro</class>
+        <class>org.example.Marca</class>
+        <class>org.example.Articulo</class>
+        <class>org.example.ListaPrecio</class>
+        <class>org.example.ListaPrecioArticulo</class>
+        <class>org.example.FacturaVenta</class>
+        <class>org.example.FacturaVentaDetalle</class>
+
         <properties>
 
             <property name="jakarta.persistence.jdbc.driver"
@@ -23,7 +40,7 @@
                       value="postgres"/>
 
             <property name="jakarta.persistence.jdbc.password"
-                      value="EJEMPLOOO"/>
+                      value="EEJEMPLOO"/>
 
             <property name="hibernate.show_sql"
                       value="true"/>
