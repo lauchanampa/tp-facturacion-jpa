@@ -1,12 +1,10 @@
 package org.example.entidad;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "articulo")
+@Table(name = "articulo", schema = "modelo")
+@SequenceGenerator(schema = "modelo", sequenceName = "articulo_seq", name = "articulo_generator")
 public class Articulo extends AuditoriaApp {
 
     @ManyToOne

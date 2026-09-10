@@ -1,10 +1,12 @@
 package org.example.entidad;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "rubro")
+@Table(name = "rubro", schema = "modelo")
+@SequenceGenerator(schema = "modelo", sequenceName = "rubro_seq", name = "rubro_generator")
 public class Rubro extends AuditoriaApp {
 
     @Column(nullable = false)

@@ -1,13 +1,10 @@
 package org.example.entidad;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "factura_venta_detalle")
+@Table(name = "factura_venta_detalle", schema = "modelo")
+@SequenceGenerator(schema = "modelo", sequenceName = "factura_venta_detalle_seq", name = "factura_venta_detalle_generator")
 public class FacturaVentaDetalle extends EntityId {
 
     @ManyToOne

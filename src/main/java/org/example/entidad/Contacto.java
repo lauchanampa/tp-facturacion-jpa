@@ -1,9 +1,11 @@
 package org.example.entidad;
 import jakarta.persistence.Entity;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "contacto")
+@Table(name = "contacto", schema = "modelo")
+@SequenceGenerator(schema = "modelo", sequenceName = "contacto_seq", name = "contacto_generator")
 public class Contacto extends EntityId {
 
     private String email;

@@ -40,7 +40,7 @@
                       value="postgres"/>
 
             <property name="jakarta.persistence.jdbc.password"
-                      value="EJEMPLOO"/>
+                      value="EJEMPLO"/>
 
             <property name="hibernate.show_sql"
                       value="true"/>

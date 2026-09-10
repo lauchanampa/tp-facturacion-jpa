@@ -6,7 +6,8 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "factura_venta")
+@Table(name = "factura_venta", schema = "modelo")
+@SequenceGenerator(schema = "modelo", sequenceName = "factura_venta_seq", name = "factura_venta_generator")
 public class FacturaVenta extends AuditoriaApp {
 
     private Long numero;

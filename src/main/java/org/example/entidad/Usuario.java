@@ -2,10 +2,12 @@ package org.example.entidad;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "usuario", schema = "modelo")
+@SequenceGenerator(schema = "modelo", sequenceName = "usuario_seq", name = "usuario_generator")
 public class Usuario extends EntityId {
 
     @Column(nullable = false)
