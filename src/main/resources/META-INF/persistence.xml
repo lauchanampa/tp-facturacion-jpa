@@ -11,8 +11,6 @@
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>org.example.entidad.EntityId</class>
-        <class>org.example.entidad.AuditoriaApp</class>
         <class>org.example.entidad.Usuario</class>
         <class>org.example.entidad.Cliente</class>
         <class>org.example.entidad.Contacto</class>
